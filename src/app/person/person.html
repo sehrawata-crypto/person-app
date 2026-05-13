@@ -1,0 +1,11 @@
+<div class="card mb-3 bg-light">
+  <div class="card-body">
+    <p class="mb-1">{{ person.firstName }} {{ person.lastName }}</p>
+    <p class="mb-1">{{ person.address }}</p>
+    <p class="mb-1">{{ person.city }}, {{ person.province }}</p>
+    <p class="mb-0">{{ person.phone }}</p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">Last updated: {{ person.lastUpdated | date:'medium' }}</small>
+  </div>
+</div>
