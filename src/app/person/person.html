@@ -1,11 +1,23 @@
-<div class="card mb-3 bg-light">
-  <div class="card-body">
-    <p class="mb-1">{{ person.firstName }} {{ person.lastName }}</p>
-    <p class="mb-1">{{ person.address }}</p>
-    <p class="mb-1">{{ person.city }}, {{ person.province }}</p>
-    <p class="mb-0">{{ person.phone }}</p>
-  </div>
-  <div class="card-footer">
-    <small class="text-muted">Last updated: {{ person.lastUpdated | date:'medium' }}</small>
-  </div>
+<div class="person-list">
+  <h2>Person List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of persons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.email }}</td>
+        <td>{{ person.age }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
